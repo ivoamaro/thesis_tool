@@ -2,8 +2,14 @@
   <div>
     <h1 class="title is-4">Simple</h1>
     <h2 class="subtitle is-5">Simple Elements</h2>
-    <div class="buttons are-small">
-      <button v-for="b in button" :key="b" class="button">{{b.name}}</button>
+     <div class="buttons are-small">
+      <button
+        v-for="(b,i) in button"
+        :key="b"
+        :class="{ 'is-link': i === activeItem}"
+        class="button"
+        v-on:click="currentTab = i, selectItem(i)"
+      >{{b.name}}</button>
     </div>
   </div>
 </template>
@@ -12,6 +18,7 @@
 export default {
   data: function() {
     return {
+      activeItem: null,
       button: [
         { name: "text" },
         { name: "link" },
@@ -26,6 +33,14 @@ export default {
         { name: "calendar" }
       ]
     };
+  },
+  methods: {
+    selectItem(i) {
+      this.activeItem = i;
+    }
+  },
+  mounted: function () {
+    this.selectItem(0);
   }
 };
 </script>

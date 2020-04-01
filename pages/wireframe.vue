@@ -3,10 +3,8 @@
     <h1 class="title is-1">Wireframe</h1>
     <h2 class="subtitle is-2">Deals with the page itself, how it is sketched</h2>
 
-    <div class="tab">
-      <button class="button" v-on:click="currentTab = 0, isactive()">Screen Size</button>
-      <button class="button" v-on:click="currentTab = 1, isactive()">Structure</button>
-      <button class="button" v-on:click="currentTab = 2, isactive()">Elements</button>
+    <div class="buttons">
+      <button v-for="(b,i) in button" :key="b" :class="{ 'is-link': i === activeItem}" class="button" v-on:click="currentTab = i, selectItem(i)">{{b.name}}</button>
     </div>
 
     <screensize v-if="currentTab == 0" />
@@ -24,7 +22,12 @@ export default {
   data: function() {
     return {
       currentTab: "0",
-      isActive: true
+      activeItem: null,
+      button: [
+        { name: "Screen Size" },
+        { name: "Structure" },
+        { name: "Elements" }
+      ]
     };
   },
   components: {
@@ -33,15 +36,17 @@ export default {
     elements
   },
   methods: {
-    isactive: function() {
-      this.isActive = !this.isActive;
-      // some code to filter users
+    selectItem(i) {
+      this.activeItem = i;
     }
+  },
+  mounted: function () {
+    this.selectItem(0);
   }
 };
 </script>
 
-<style scoped>
+<style>
 .tab {
   margin-bottom: 20px;
 }
