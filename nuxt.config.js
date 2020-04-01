@@ -24,6 +24,10 @@ export default {
       href: '/favicon.ico'
     }]
   },
+  router: {
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-active'
+  },
   /*
    ** Customize the progress-bar color
    */
