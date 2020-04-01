@@ -1,25 +1,18 @@
 <template>
   <div class="columns is-desktop">
     <div class="column is-one-quarter">
-      <Sidebar />
+      <sidebar />
     </div>
     <div class="column page">
-      <secNav />
-      <div class="columns">
-        <div class="column">
-          <nuxt />
-        </div>
-      </div>
+      <nuxt />
     </div>
   </div>
 </template>
 <script>
-import Sidebar from "@/components/Sidebar";
-import secNav from "@/components/SecondaryNav";
+import sidebar from "@/components/sidebar";
 export default {
   components: {
-    Sidebar,
-    secNav
+    sidebar
   }
 };
 </script>

@@ -1,20 +1,20 @@
 <template>
   <div class="sidebar_menu">
     <aside class="menu">
-      <h1>
-        <nuxt-link to="/" class="is-active">Home</nuxt-link>
+      <h1 class="title is-1">
+        <nuxt-link to="/">Home</nuxt-link>
       </h1>
       <p class="menu-label">Graphic Database</p>
       <ul class="menu-list">
         <li>
-          <nuxt-link to="/sitemap">Sitemap</nuxt-link>
+          <nuxt-link to="/Sitemap">Sitemap</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/storyboard">Storyboard</nuxt-link>
+          <nuxt-link to="/Storyboard">Storyboard</nuxt-link>
         </li>
 
         <li>
-          <nuxt-link to="/wireframe">Wireframe</nuxt-link>
+          <nuxt-link to="/Wireframe">Wireframe</nuxt-link>
           <ul>
             <li>
               <a>Screen Size</a>
@@ -42,7 +42,7 @@
 
 <style scoped>
 .sidebar_menu {
-  padding-top: 50px;
+  padding-top: 37px;
   padding-left: 50px;
 }
 </style>
