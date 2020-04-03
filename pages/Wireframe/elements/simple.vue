@@ -2,10 +2,10 @@
   <div>
     <h1 class="title is-4">Simple</h1>
     <h2 class="subtitle is-5">Simple Elements</h2>
-     <div class="buttons are-small">
+    <div class="buttons are-small">
       <button
         v-for="(b,i) in button"
-        :key="b"
+        :key="b.name + i"
         :class="{ 'is-link': i === activeItem}"
         class="button"
         v-on:click="currentTab = i, selectItem(i)"
@@ -39,7 +39,7 @@ export default {
       this.activeItem = i;
     }
   },
-  mounted: function () {
+  mounted: function() {
     this.selectItem(0);
   }
 };

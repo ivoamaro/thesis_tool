@@ -17,19 +17,20 @@
           <nuxt-link to="/Wireframe">Wireframe</nuxt-link>
           <ul>
             <li>
-              <a>Screen Size</a>
+              <nuxt-link to="/Wireframe/screensize">Screen Size</nuxt-link>
             </li>
             <li>
-              <a>Structure</a>
+              <nuxt-link to="/Wireframe/structure">Structure</nuxt-link>
             </li>
             <li>
-              <a>Elements</a>
+              <nuxt-link to="/Wireframe/elements">Elements</nuxt-link>
+
               <ul>
                 <li>
-                  <a>Simple</a>
+                  <nuxt-link to="/Wireframe/elements/simple">Simple</nuxt-link>
                 </li>
                 <li>
-                  <a>Complex</a>
+                  <nuxt-link to="/Wireframe/elements/complex">Complex</nuxt-link>
                 </li>
               </ul>
             </li>

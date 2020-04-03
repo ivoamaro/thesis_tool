@@ -4,9 +4,9 @@
     <h2 class="subtitle is-2">Deals with how simple transition are made like a pop-up</h2>
 
     <div class="buttons are-small">
-       <button
+      <button
         v-for="(b,i) in button"
-        :key="b"
+        :key="b.name + i"
         :class="{ 'is-link': i === activeItem}"
         class="button"
         v-on:click="currentTab = i, selectItem(i)"
@@ -23,12 +23,12 @@ export default {
       button: [{ name: "Hover" }, { name: "Submit Form" }]
     };
   },
-    methods: {
+  methods: {
     selectItem(i) {
       this.activeItem = i;
     }
   },
-  mounted: function () {
+  mounted: function() {
     this.selectItem(0);
   }
 };
