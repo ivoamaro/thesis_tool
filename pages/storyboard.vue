@@ -1,35 +1,30 @@
 <template>
   <div>
-    <h1 class="title is-1">Storyboard</h1>
-    <h2 class="subtitle is-2">Deals with how simple transition are made like a pop-up</h2>
+    <h1 class="title is-1">{{title}}</h1>
+    <h2 class="subtitle is-2">{{subtitle}}</h2>
 
-    <div class="buttons are-small">
-      <button
-        v-for="(b,i) in button"
-        :key="b.name + i"
-        :class="{ 'is-link': i === activeItem}"
-        class="button"
-        v-on:click="currentTab = i, selectItem(i)"
-      >{{b.name}}</button>
-    </div>
+    <nuxt-link
+      v-for="(b,i) in buttons"
+      :key="b.name + i"
+      class="button is-small"
+      :to="'/Storyboard/'+b.path"
+    >{{b.name}}</nuxt-link>
+    <nuxt-child />
   </div>
 </template>
 
 <script>
 export default {
-  data: function() {
-    return {
-      activeItem: null,
-      button: [{ name: "Hover" }, { name: "Submit Form" }]
-    };
-  },
-  methods: {
-    selectItem(i) {
-      this.activeItem = i;
+  computed: {
+    buttons() {
+      return this.$store.getters.getStoryboardButtons;
+    },
+    title() {
+      return this.$store.getters.getStoryboardTitle;
+    },
+    subtitle() {
+      return this.$store.getters.getStoryboardSubTitle;
     }
-  },
-  mounted: function() {
-    this.selectItem(0);
   }
 };
 </script>

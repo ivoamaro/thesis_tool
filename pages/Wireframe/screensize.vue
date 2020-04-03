@@ -1,34 +1,30 @@
 <template>
   <div>
-    <h1 class="title is-4">Screen Size</h1>
-    <h2 class="subtitle is-5">isto faz isto isto</h2>
-    <div class="buttons are-small">
-      <button
-        v-for="(b,i) in button"
-        :key="b.name + i"
-        :class="{ 'is-link': i === activeItem}"
-        class="button"
-        v-on:click="currentTab = i, selectItem(i)"
-      >{{b.name}}</button>
-    </div>
+    <h3 class="title is-3">{{title}}</h3>
+    <h4 class="subtitle is-4">{{subtitle}}</h4>
+
+    <nuxt-link
+      v-for="(b,i) in buttons"
+      :key="b.name + i"
+      class="button is-small"
+      :to="'/Wireframe/screensize'+b.path"
+    >{{b.name}}</nuxt-link>
+    <nuxt-child />
   </div>
 </template>
 
 <script>
 export default {
-  data: function() {
-    return {
-      activeItem: null,
-      button: [{ name: "Desktop" }, { name: "Tablet" }, { name: "Mobile" }]
-    };
-  },
-  methods: {
-    selectItem(i) {
-      this.activeItem = i;
+  computed: {
+    buttons() {
+      return this.$store.getters.getScreenSizeButtons;
+    },
+    title() {
+      return this.$store.getters.getScreenSizeTitle;
+    },
+    subtitle() {
+      return this.$store.getters.getScreenSizeSubTitle;
     }
-  },
-  mounted: function() {
-    this.selectItem(0);
   }
 };
 </script>

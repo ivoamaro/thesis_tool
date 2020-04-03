@@ -1,27 +1,30 @@
 <template>
   <div>
-    <h1 class="title is-4">Elements</h1>
-    <h2 class="subtitle is-5">Elements of the page</h2>
+    <h3 class="title is-3">{{title}}</h3>
+    <h4 class="subtitle is-4">{{subtitle}}</h4>
 
-    <div>
-      <nuxt-link class="button" to="/Wireframe/elements/simple">Simple</nuxt-link>
-      <nuxt-link class="button" to="/Wireframe/elements/complex">Complex</nuxt-link>
-    </div>
-
+    <nuxt-link
+      v-for="(b,i) in buttons"
+      :key="b.name + i"
+      class="button is-small"
+      :to="'/Wireframe/elements'+b.path"
+    >{{b.name}}</nuxt-link>
     <nuxt-child />
   </div>
 </template>
 
 <script>
 export default {
-  data: function() {
-    return {};
+  computed: {
+    buttons() {
+      return this.$store.getters.getElementsButtons;
+    },
+    title() {
+      return this.$store.getters.getElementsTitle;
+    },
+    subtitle() {
+      return this.$store.getters.getElementsSubTitle;
+    }
   }
 };
 </script>
-
-<style scoped>
-.tab2 {
-  margin-bottom: 20px;
-}
-</style>

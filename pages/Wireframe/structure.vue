@@ -1,43 +1,30 @@
 <template>
   <div>
-    <h1 class="title is-4">Structure</h1>
-    <h2 class="subtitle is-5">isto faz isto isto</h2>
+    <h3 class="title is-3">{{title}}</h3>
+    <h4 class="subtitle is-4">{{subtitle}}</h4>
 
-    <div class="buttons are-small">
-      <button
-        v-for="(b,i) in button"
-        :key="b.name + i"
-        :class="{ 'is-link': i === activeItem}"
-        class="button"
-        v-on:click="currentTab = i, selectItem(i)"
-      >{{b.name}}</button>
-    </div>
+    <nuxt-link
+      v-for="(b,i) in buttons"
+      :key="b.name + i"
+      class="button is-small"
+      :to="'/Wireframe/structure'+b.path"
+    >{{b.name}}</nuxt-link>
+    <nuxt-child />
   </div>
 </template>
 
 <script>
 export default {
-  data: function() {
-    return {
-      activeItem: null,
-      button: [
-        { name: "Columns" },
-        { name: "Row" },
-        { name: "Section" },
-        { name: "Container" },
-        { name: "Grid" }
-      ]
-    };
-  },
-  methods: {
-    selectItem(i) {
-      this.activeItem = i;
+  computed: {
+    buttons() {
+      return this.$store.getters.getStructureButtons;
+    },
+    title() {
+      return this.$store.getters.getStructureTitle;
+    },
+    subtitle() {
+      return this.$store.getters.getStructureSubTitle;
     }
-  },
-  mounted: function() {
-    this.selectItem(0);
   }
 };
 </script>
-
-
