@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-desktop">
-    <div class="column is-one-quarter">
+    <div class="column is-one-fifth">
       <sidebar />
     </div>
     <div class="column page">

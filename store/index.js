@@ -1,4 +1,16 @@
 export const state = () => ({
+  first_layer: [{
+    button: [{
+      name: 'Sitemap',
+      path: 'Sitemap'
+    }, {
+      name: 'Storyboard',
+      path: 'Storyboard'
+    }, {
+      name: 'Wireframe',
+      path: 'Wireframe'
+    }]
+  }],
   storyboard: [{
     title: 'Storyboard',
     subtitle: 'Deals with how simple transition are made like a pop-up',
@@ -126,6 +138,9 @@ export const state = () => ({
 
 
 export const getters = {
+  getFlayerButtons: (state) => {
+    return state.first_layer[0].button;
+  },
   getStoryboardButtons: (state) => {
     return state.storyboard[0].button;
   },
