@@ -1,13 +1,12 @@
 const express = require('express');
 const multer = require('multer');
 
-
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/')
   },
   filename: function (req, file, cb) {
-    cb(null, req.body.filename + Date.now() + '.jpg') //Appending .jpg
+    cb(null, req.body.filename + '_' + Date.now() + '.jpg') //Appending .jpg
   }
 })
 
