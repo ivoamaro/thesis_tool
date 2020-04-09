@@ -1,9 +1,15 @@
 const express = require('express');
 const multer = require('multer');
+const fs = require('fs');
+let dir;
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/')
+    dir = 'assets/imagens/' + req.body.filepath;
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+      cb(null, dir)
+    }
   },
   filename: function (req, file, cb) {
     cb(null, req.body.filename + '_' + Date.now() + '.jpg') //Appending .jpg

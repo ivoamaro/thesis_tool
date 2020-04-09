@@ -1,9 +1,9 @@
 <template>
-  <div class="columns is-desktop">
-    <div class="column is-one-fifth">
+  <div>
+    <div class="column">
       <sidebar />
     </div>
-    <div class="column page">
+    <div class="column">
       <nuxt />
     </div>
   </div>
@@ -24,5 +24,24 @@ export default {
 }
 .page {
   padding: 50px;
+}
+.column {
+  padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+p,
+label,
+input,
+button,
+span,
+a {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 </style>

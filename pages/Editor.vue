@@ -1,30 +1,33 @@
 <template>
   <div>
-    <h1 class="title is-1">Editor</h1>
-    <h2 class="subtitle is-2">Simple Tool to to fasten the process of visualizing data</h2>
-    <div class="columns box">
-      <Cropper ref="cropper" class="upload-example-cropper" :src="image" />
+    <div class="column">
+      <h1 class="title is-1">Editor</h1>
+      <h2 class="subtitle is-2">Simple Tool to to fasten the process of visualizing data</h2>
     </div>
     <div class="columns box">
-      <span class="button" @click="$refs.file.click()">
-        <input type="file" name="teste" ref="file" @change="uploadImage($event)" accept="image/*" />
-        Upload image
-      </span>
-
-      <button class="button" @click="crop">Crop</button>
-    </div>
-
-    <div class="columns box">
-      <div class="column">
-        <label class="label">Image Name</label>
-        <input v-model="name" class="input" type="text" placeholder="Text input" />
-        <button class="button" @click="save_croped">Save Croped Image</button>
-        <button class="button" @click="save_original">Save Original Image</button>
+      <div class="column is-two-thirds">
+        <Cropper ref="cropper" class="upload-example-cropper" :src="image" />
       </div>
-
       <div class="column">
-        <h6 class="title is-6">Crop</h6>
-        <img v-if="img != ''" class="preview" :src="img" />
+        <span class="button" @click="$refs.file.click()">
+          <input type="file" name="teste" ref="file" @change="uploadImage($event)" accept="image/*" />
+          Upload image
+        </span>
+
+        <button class="button" @click="crop">Crop</button>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Image Name</label>
+            <input v-model="name" class="input" type="text" placeholder="Text input" />
+            <label class="label">Image Path</label>
+            <input v-model="path" class="input" type="text" placeholder="Text input" />
+            <button class="button" @click="save_croped">Save Croped Image</button>
+            <button class="button" @click="save_original">Save Original Image</button>
+            <h6 class="title is-6">Crop</h6>
+            <img v-if="img != ''" class="preview" :src="img" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +41,7 @@ export default {
     return {
       file: "",
       name: "",
+      path: "",
       image: null,
       img: "",
       coordinates: {
@@ -76,6 +80,7 @@ export default {
       this.file = this.$refs.file.files[0];
       let formData = new FormData();
       formData.append("filename", this.name);
+      formData.append("filepath", this.path);
       formData.append("file", this.file);
 
       axios
@@ -129,6 +134,8 @@ export default {
       // Convert it to a blob to upload
       var blob = b64toBlob(realData, contentType);
       let formData = new FormData();
+      formData.append("filename", this.name);
+      formData.append("filepath", this.path);
       formData.append("file", blob);
       axios
         .post("http://localhost:3000/api/foo", formData, {
@@ -165,7 +172,7 @@ export default {
 }
 
 .preview {
-  width: 45%;
+  width: 90%;
   border: 1px solid gray;
   border-radius: 5px;
   margin: 2.5%;
