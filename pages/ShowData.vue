@@ -2,40 +2,49 @@
   <div>
     <h1>Search for Data</h1>
 
-    <div class="field has-addons">
-      <div class="control">
-        <input class="input" v-model="search" type="text" placeholder="Search" />
+    <!--<div v-for="(t,i) in info" :key="t+i">
+      <img :src="t.original_src" alt="cenas" />
+      <div v-for="(t2,i) in t.crops_src" :key="t2+i">
+        <img :src="t2" alt="cenas" />
       </div>
-      <div class="control">
-        <a class="button is-info">Search</a>
-      </div>
+    </div>-->
+
+    <div v-for="(t,i) in setData" :key="t+i">
+      <nuxt-link :to="{ 
+      name:'Id',
+      params: { id: t.id}
+      }">
+        <div class="entrys box">
+          <img :src="t.original_src" alt="cenas" />
+          <span>retrieved: {{t.found}}</span>
+        </div>
+      </nuxt-link>
     </div>
-    <!---->
-    <p>{{ info }}</p>
-    <!--<img v-for="(img, i) in info.original" :key="img + i" :src="'~/' + img" />-->
   </div>
 </template>
 
 <script>
-import axios from "axios";
-let funciona;
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
-      search: "asdasdasda",
-      info: null
+      search: ""
     };
   },
-  mounted() {
-    axios
-      .get("http://localhost:4000/api/database.json/data")
-      .then(response => (this.info = response));
+  computed: {
+    setData() {
+      return this.$store.state.posts;
+    },
+    ...mapState(["posts"])
   }
 };
 </script>
 
 <style scoped>
-img {
-  width: 25%;
+.entrys {
+  width: 20%;
+  margin: 2.5%;
+  float: left;
 }
 </style>

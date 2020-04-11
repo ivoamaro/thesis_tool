@@ -92,7 +92,7 @@ export default {
     },
     save_original() {
       let filename = this.name + "_" + Date.now();
-      this.data.original_src = "assets/images/" + filename + ".jpg";
+      this.data.original_src = "images/" + this.path + filename + ".jpg";
       this.file = this.$refs.file.files[0];
       let formData = new FormData();
       formData.append("filename", filename);
@@ -151,7 +151,7 @@ export default {
       let blob = b64toBlob(realData, contentType);
 
       this.data.crops_src.push(
-        "assets/images/" + this.name + "_" + Date.now() + ".jpg"
+        "images/" + this.path + this.name + "_" + Date.now() + ".jpg"
       );
       let formData = new FormData();
       formData.append("filename", this.name + "_" + Date.now());
@@ -173,6 +173,7 @@ export default {
     save_to_database() {
       this.data.notes = this.notes;
       this.data.found = this.found;
+
       axios
         .post("http://localhost:4000/api/database.json/data", this.data)
         .then(function() {
