@@ -11,39 +11,31 @@
       </div>
     </div>
     <!---->
-    <div v-for="(data,i) in info" :key="data + i">
-      <h2>{{data.friends}}</h2>
-    </div>
+    <p>{{ info }}</p>
+    <!--<img v-for="(img, i) in info.original" :key="img + i" :src="'~/' + img" />-->
   </div>
 </template>
 
 <script>
 import axios from "axios";
+let funciona;
 export default {
   data() {
     return {
-      search: "",
-      info: []
+      search: "asdasdasda",
+      info: null
     };
   },
-  created() {
-    //load data array
-    /*axios
-      .get("https://thesisdatabase-ffa2d.firebaseio.com/entry.json")
-      .then(function(data) {
-        console.log(data);
-        this.info = data.body.slice(0, 10);
-      })
-      .catch(error => {
-        console.log(error);
-      });*/
-  },
-  computed: {
-    filterData() {
-      return this.info.filter(info => {
-        return boolean;
-      });
-    }
+  mounted() {
+    axios
+      .get("http://localhost:4000/api/database.json/data")
+      .then(response => (this.info = response));
   }
 };
 </script>
+
+<style scoped>
+img {
+  width: 25%;
+}
+</style>

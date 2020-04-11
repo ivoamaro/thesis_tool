@@ -22,8 +22,14 @@
             <input v-model="name" class="input" type="text" placeholder="Text input" />
             <label class="label">Image Path</label>
             <input v-model="path" class="input" type="text" placeholder="Text input" />
+
             <button class="button" @click="save_croped">Save Croped Image</button>
             <button class="button" @click="save_original">Save Original Image</button>
+            <label class="label">Notes</label>
+            <textarea class="textarea" v-model="notes" placeholder="Notes"></textarea>
+            <label class="label">Found</label>
+            <input v-model="found" class="input" type="text" placeholder="Found" />
+            <button class="button" @click="save_to_database">Save To Database</button>
             <h6 class="title is-6">Crop</h6>
             <img v-if="img != ''" class="preview" :src="img" />
           </div>
@@ -42,6 +48,8 @@ export default {
       file: "",
       name: "",
       path: "",
+      notes: "",
+      found: "",
       image: null,
       img: "",
       coordinates: {
@@ -49,6 +57,12 @@ export default {
         height: 0,
         left: 0,
         top: 0
+      },
+      data: {
+        original_src: "",
+        notes: "",
+        found: "",
+        crops_src: []
       }
     };
   },
@@ -77,9 +91,11 @@ export default {
       }
     },
     save_original() {
+      let filename = this.name + "_" + Date.now();
+      this.data.original_src = "assets/images/" + filename + ".jpg";
       this.file = this.$refs.file.files[0];
       let formData = new FormData();
-      formData.append("filename", this.name);
+      formData.append("filename", filename);
       formData.append("filepath", this.path);
       formData.append("file", this.file);
 
@@ -124,17 +140,21 @@ export default {
         var blob = new Blob(byteArrays, { type: contentType });
         return blob;
       }
-
-      var block = this.img.split(";");
+      //let block = [];
+      let block = this.img.split(";");
       // Get the content type of the image
-      var contentType = block[0].split(":")[1]; // In this case "image/gif"
+      let contentType = block[0].split(":")[1]; // In this case "image/gif"
       // get the real base64 content of the file
-      var realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
+      let realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
 
       // Convert it to a blob to upload
-      var blob = b64toBlob(realData, contentType);
+      let blob = b64toBlob(realData, contentType);
+
+      this.data.crops_src.push(
+        "assets/images/" + this.name + "_" + Date.now() + ".jpg"
+      );
       let formData = new FormData();
-      formData.append("filename", this.name);
+      formData.append("filename", this.name + "_" + Date.now());
       formData.append("filepath", this.path);
       formData.append("file", blob);
       axios
@@ -143,6 +163,18 @@ export default {
             "Content-Type": "multipart/form-data"
           }
         })
+        .then(function() {
+          alert("SUCCESS!!");
+        })
+        .catch(function(error) {
+          alert("FAILURE!!");
+        });
+    },
+    save_to_database() {
+      this.data.notes = this.notes;
+      this.data.found = this.found;
+      axios
+        .post("http://localhost:4000/api/database.json/data", this.data)
         .then(function() {
           alert("SUCCESS!!");
         })

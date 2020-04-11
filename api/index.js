@@ -5,14 +5,16 @@ let dir;
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    dir = 'assets/imagens/' + req.body.filepath;
+    dir = 'assets/images/' + req.body.filepath;
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir);
+      cb(null, dir)
+    } else {
       cb(null, dir)
     }
   },
   filename: function (req, file, cb) {
-    cb(null, req.body.filename + '_' + Date.now() + '.jpg') //Appending .jpg
+    cb(null, req.body.filename + '.jpg') //Appending .jpg
   }
 })
 
