@@ -22,12 +22,6 @@ export default {
   margin: 0;
   padding: 0;
 }
-.page {
-  padding: 50px;
-}
-.column {
-  padding: 10px;
-}
 
 h1,
 h2,

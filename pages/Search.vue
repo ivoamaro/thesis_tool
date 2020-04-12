@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <h1>Search</h1>
-    <input v-model="search" class="input" type="text" placeholder="Text input" />
+  <div class="main">
+    <div class="columns">
+      <div class="column">
+        <h1 class="title is-1">Search</h1>
+        <input v-model="search" class="input" type="text" placeholder="Text input" />
+      </div>
+    </div>
+
     <div v-for="(crops,i) in filteredCrops" :key="crops + i">
       <div class="box src">
         <img :src="crops" alt="cenas" />
@@ -43,5 +48,13 @@ export default {
   width: 20%;
   margin: 2.5%;
   float: left;
+}
+.title {
+  width: 25%;
+  margin: 2.5%;
+}
+input {
+  width: 40%;
+  margin-left: 2.5%;
 }
 </style>
