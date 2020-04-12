@@ -13,7 +13,8 @@
         <div class="navbar-start">
           <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
           <nuxt-link class="navbar-item" to="/Editor">Editor</nuxt-link>
-          <nuxt-link class="navbar-item" to="/ShowData">Search</nuxt-link>
+          <nuxt-link class="navbar-item" to="/ShowData">Database</nuxt-link>
+          <nuxt-link class="navbar-item" to="/Search">Search</nuxt-link>
         </div>
       </div>
     </nav>
