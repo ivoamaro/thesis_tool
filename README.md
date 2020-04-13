@@ -1,6 +1,6 @@
 # thesis_tool
 
-> Image database for data analysis
+> This tool is intended to store sketches of websites to therefore analyze them and find patterns.
 
 ## Build Setup
 
@@ -20,3 +20,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Run Server Locally
+
+json-server --watch api/database.json --port 4000
+
