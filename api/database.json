@@ -2,7 +2,7 @@
   "data": [{
       "original_src": "images/teste/original_1586550097615.jpg",
       "notes": "algumas conseideraaç~eoskadosjfo",
-      "found": "online",
+      "found": "Online",
       "crops_src": [
         "images/teste/crops/c1_1586550121649.jpg",
         "images/teste/crops/c2_1586550136128.jpg"
@@ -13,7 +13,7 @@
     {
       "original_src": "images/teste/original_1586550097615.jpg",
       "notes": "dadasd",
-      "found": "local",
+      "found": "Online",
       "crops_src": [
         "images/teste/crops/c1_1586550121649.jpg",
         "images/teste/crops/c2_1586550136128.jpg"
@@ -23,7 +23,7 @@
     }, {
       "original_src": "images/teste/original_1586550097615.jpg",
       "notes": "dadasd",
-      "found": "survey",
+      "found": "Survey",
       "crops_src": [
         "images/teste/crops/c1_1586550121649.jpg",
         "images/teste/crops/c2_1586550136128.jpg"
@@ -33,7 +33,7 @@
     }, {
       "original_src": "images/teste/original_1586550097615.jpg",
       "notes": "dadasd",
-      "found": "professional",
+      "found": "Professional",
       "crops_src": [
         "images/teste/crops/c1_1586550121649.jpg",
         "images/teste/crops/c2_1586550136128.jpg"
@@ -44,7 +44,7 @@
     {
       "original_src": "images/teste/original_1586550097615.jpg",
       "notes": "dadasd",
-      "found": "adsd",
+      "found": "Survey",
       "crops_src": [
         "images/teste/crops/c1_1586550121649.jpg",
         "images/teste/crops/c2_1586550136128.jpg"
