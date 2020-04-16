@@ -5,10 +5,10 @@
         <img :src="setData.original_src" alt="cenas" />
       </div>
       <div class="column box">
-        <h1 class="title is-1">Notes</h1>
-        <h2>{{setData.notes}}</h2>
         <h1 class="title is-1">Found</h1>
         <h2>{{setData.found}}</h2>
+        <h1 class="title is-1">Notes</h1>
+        <h2>{{setData.notes}}</h2>
       </div>
     </div>
     <div class="columns box">

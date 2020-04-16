@@ -29,6 +29,7 @@ export default {
     },
     filteredCrops() {
       let data = [];
+      data.length = 0;
       this.$store.state.posts.forEach(crops => {
         crops.crops_src.forEach(c => {
           data.push(c);
