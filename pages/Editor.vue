@@ -36,10 +36,14 @@
         </div>
       </div>
     </div>
+    <div class="column box">
+      <cheatsheet />
+    </div>
   </div>
 </template>
 <script>
 import axios from "axios";
+import cheatsheet from "@/components/cheatsheets";
 import { Cropper } from "vue-advanced-cropper";
 
 export default {
@@ -92,7 +96,7 @@ export default {
     },
     save_original() {
       let filename = this.name + "_" + Date.now();
-      this.data.original_src = "images/" + this.path + filename + ".jpg";
+      this.data.original_src = "data/" + this.path + filename + ".jpg";
       this.file = this.$refs.file.files[0];
       let formData = new FormData();
       formData.append("filename", filename);
@@ -151,7 +155,7 @@ export default {
       let blob = b64toBlob(realData, contentType);
 
       this.data.crops_src.push(
-        "images/" + this.path + this.name + "_" + Date.now() + ".jpg"
+        "data/" + this.path + this.name + "_" + Date.now() + ".jpg"
       );
       let formData = new FormData();
       formData.append("filename", this.name + "_" + Date.now());
@@ -185,7 +189,8 @@ export default {
     }
   },
   components: {
-    Cropper
+    Cropper,
+    cheatsheet
   }
 };
 </script>

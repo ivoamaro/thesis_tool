@@ -5,9 +5,11 @@ let dir;
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    dir = 'static/images/' + req.body.filepath;
+    dir = 'static/data/' + req.body.filepath;
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
+      fs.mkdirSync(dir, {
+        recursive: true
+      });
       cb(null, dir)
     } else {
       cb(null, dir)
