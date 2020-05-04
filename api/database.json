@@ -104,6 +104,42 @@
       ],
       "apiId": "database.json",
       "id": 5
+    },
+    {
+      "original_src": "data/6/original_1588597792014.jpg",
+      "notes": "Sketch based on Bootstrap example \nhttps://getbootstrap.com/docs/4.4/examples/album/\n\n1- Ambiguous Drawings. \n2- Same representation to different abstractions\n      ",
+      "found": "Professional",
+      "crops_src": [
+        "data/6/crops/wireframe_elements_structure_section_1588597893400.jpg",
+        "data/6/crops/wireframe_elements_complex_navbar_1588597937362.jpg",
+        "data/6/crops/iconography_1588597964389.jpg",
+        "data/6/crops/logo_1588597984852.jpg",
+        "data/6/crops/wireframe_elements_complex_footer_1588598012917.jpg",
+        "data/6/crops/wireframe_elements_structure_grid_1588598041102.jpg",
+        "data/6/crops/wireframe_elements_simple_image_1588598062987.jpg",
+        "data/6/crops/wireframe_elements_structure_container_1588598093487.jpg",
+        "data/6/crops/wireframe_screensize_desktop_1588598140286.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 6
+    },
+    {
+      "original_src": "data/7/original_1588598702462.jpg",
+      "notes": "",
+      "found": "Professional",
+      "crops_src": [
+        "data/7/crops/wireframe_elements_complex_navbar_1588598756860.jpg",
+        "data/7/crops/logo_1588598778232.jpg",
+        "data/7/crops/wireframe_elements_simple_input_search_1588598809651.jpg",
+        "data/7/crops/iconography_1588598826280.jpg",
+        "data/7/crops/iconography_1588598835834.jpg",
+        "data/7/crops/iconography_1588598845363.jpg",
+        "data/7/crops/wireframe_elements_simple_text_1588598875995.jpg",
+        "data/7/crops/wireframe_structure_container_1588598910304.jpg",
+        "data/7/crops/wireframe_screensize_desktop_1588598935080.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 7
     }
   ]
 }
