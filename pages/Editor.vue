@@ -6,7 +6,7 @@
     </div>
     <div class="columns box">
       <div class="column is-two-thirds">
-        <Cropper ref="cropper" class="upload-example-cropper" :src="image" />
+        <Cropper imageRestriction="none" ref="cropper" class="upload-example-cropper" :src="image" />
       </div>
       <div class="column">
         <span class="button" @click="$refs.file.click()">

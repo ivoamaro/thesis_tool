@@ -140,6 +140,73 @@
       ],
       "apiId": "database.json",
       "id": 7
+    },
+    {
+      "original_src": "data/8/original_1588685769206.jpg",
+      "notes": "Html tags were used to specify content. Survey Part 1",
+      "found": "Survey",
+      "crops_src": [
+        "data/8/crops/wireframe_elements_screensize_desktop_1588685942934.jpg",
+        "data/8/crops/wireframe_elements_simple_video_1588685995612.jpg",
+        "data/8/crops/wireframe_elements_complex_footer_1588686037792.jpg",
+        "data/8/crops/wireframe_elements_complex_navbar_1588686062789.jpg",
+        "data/8/crops/wireframe_elements_simple_image_1588686091042.jpg",
+        "data/8/crops/wireframe_elements_simple_text_1588686110688.jpg",
+        "data/8/crops/wireframe_elements_simple_link_1588686170482.jpg",
+        "data/8/crops/wireframe_elements_structure_section_columns_1588686216645.jpg",
+        "data/8/crops/wireframe_screensize_tablet_mobile_1588686284057.jpg",
+        "data/8/crops/logo_1588686310294.jpg",
+        "data/8/crops/iconography_1588686330432.jpg",
+        "data/8/crops/storyboard_1588686357452.jpg",
+        "data/8/crops/wireframe_elements_complex_navbar_1588686384185.jpg",
+        "data/8/crops/wireframe_structure_section_1588686439854.jpg",
+        "data/8/crops/wireframe_elements_simple_text_1588686462358.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 8
+    },
+    {
+      "original_src": "data/9/original _1589203686534.jpg",
+      "notes": "Use of symbology to specify link path\nex: link 4 (X4) --> Preços (X4)",
+      "found": "Survey",
+      "crops_src": [
+        "data/9/crops/wireframe_elements_complex_footer_1589204875621.jpg",
+        "data/9/crops/wireframe_elements_simple_text_1589204967639.jpg",
+        "data/9/crops/wireframe_elements_complex_navbar_1589205004054.jpg",
+        "data/9/crops/wireframe_structure_grid_1589205046232.jpg",
+        "data/9/crops/wireframe_elements_simple_calendar_1589205130449.jpg",
+        "data/9/crops/wireframe_elements_complex_form_1589205174905.jpg",
+        "data/9/crops/wireframe_elements_simple_input_1589205206016.jpg",
+        "data/9/crops/wireframe_elements_simple_button_1589205223029.jpg",
+        "data/9/crops/wireframe_elements_simple_list_1589205267830.jpg",
+        "data/9/crops/storyboard_1589205442658.jpg",
+        "data/9/crops/wireframe_elements_complex_navbar_1589205416757.jpg",
+        "data/9/crops/wireframe_elements_simple_map_1589205487326.jpg",
+        "data/9/crops/wireframe_element_simple_table_1589205567560.jpg",
+        "data/9/crops/wireframe_structure_column_1589205531252.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 9
+    },
+    {
+      "original_src": "data/10/original_1589209038433.jpg",
+      "notes": "",
+      "found": "Survey",
+      "crops_src": [
+        "data/10/crops/screensize_1589209117779.jpg",
+        "data/10/crops/image_1589209152388.jpg",
+        "data/10/crops/text_1589209179334.jpg",
+        "data/10/crops/navbar_1589209207650.jpg",
+        "data/10/crops/logo_1589209231838.jpg",
+        "data/10/crops/iconography_1589209253999.jpg",
+        "data/10/crops/navbar_1589209286532.jpg",
+        "data/10/crops/section_column_1589209322267.jpg",
+        "data/10/crops/footer_1589209347441.jpg",
+        "data/10/crops/video_1589209364608.jpg",
+        "data/10/crops/menu_1589209427127.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 10
     }
   ]
 }
