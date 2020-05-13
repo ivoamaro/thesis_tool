@@ -462,6 +462,126 @@
       ],
       "apiId": "database.json",
       "id": 22
+    },
+    {
+      "original_src": "data/23/original_1589359590805.jpg",
+      "notes": "",
+      "found": "Survey",
+      "crops_src": [
+        "data/23/crops/screensize_1589359630118.jpg",
+        "data/23/crops/video_1589359647128.jpg",
+        "data/23/crops/image_1589359656812.jpg",
+        "data/23/crops/text_1589359671604.jpg",
+        "data/23/crops/navbar_1589359707547.jpg",
+        "data/23/crops/logo_1589359727942.jpg",
+        "data/23/crops/list_1589359748001.jpg",
+        "data/23/crops/link_1589359759034.jpg",
+        "data/23/crops/iconography_1589359784089.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 23
+    },
+    {
+      "original_src": "data/24/original_1589359909940.jpg",
+      "notes": "subject understanded \"list\" element as dropdown menu. also he bring the concept of reusable components navbar, footer",
+      "found": "Survey",
+      "crops_src": [
+        "data/24/crops/sitemap_1589359967396.jpg",
+        "data/24/crops/footer_1589359986275.jpg",
+        "data/24/crops/table_1589359999413.jpg",
+        "data/24/crops/navbar_1589360016363.jpg",
+        "data/24/crops/grid_1589360032217.jpg",
+        "data/24/crops/video_1589360043703.jpg",
+        "data/24/crops/button_1589360059956.jpg",
+        "data/24/crops/form_1589360091053.jpg",
+        "data/24/crops/storyboard_1589360115173.jpg",
+        "data/24/crops/calendar_1589360128378.jpg",
+        "data/24/crops/text_1589360143565.jpg",
+        "data/24/crops/maps_1589360159982.jpg",
+        "data/24/crops/input_1589360168705.jpg",
+        "data/24/crops/list_1589360184019.jpg",
+        "data/24/crops/dropdown_1589360240541.jpg",
+        "data/24/crops/container_1589360296107.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 24
+    },
+    {
+      "original_src": "data/25/original_1589373577371.jpg",
+      "notes": "",
+      "found": "Survey",
+      "crops_src": [
+        "data/25/crops/screensize_1589373652709.jpg",
+        "data/25/crops/image_1589373674974.jpg",
+        "data/25/crops/storyboard_1589373693534.jpg",
+        "data/25/crops/text_1589373718371.jpg",
+        "data/25/crops/footer_1589373739856.jpg",
+        "data/25/crops/footer_1589373757343.jpg",
+        "data/25/crops/navbar_1589373778596.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 25
+    },
+    {
+      "original_src": "data/26/original_1589373918634.jpg",
+      "notes": "",
+      "found": "Survey",
+      "crops_src": [
+        "data/26/crops/graphics_1589373937823.jpg",
+        "data/26/crops/table_1589373955794.jpg",
+        "data/26/crops/navbar_1589374002649.jpg",
+        "data/26/crops/container_1589374032748.jpg",
+        "data/26/crops/grid_1589374059530.jpg",
+        "data/26/crops/button_1589374082423.jpg",
+        "data/26/crops/footer_1589374101689.jpg",
+        "data/26/crops/storyboard_1589374143856.jpg",
+        "data/26/crops/calendar_1589374168589.jpg",
+        "data/26/crops/form_1589374184103.jpg",
+        "data/26/crops/input_1589374207006.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 26
+    },
+    {
+      "original_src": "data/27/original_1589374848638.jpg",
+      "notes": "",
+      "found": "Survey",
+      "crops_src": [
+        "data/27/crops/logo_1589374891469.jpg",
+        "data/27/crops/navbar_1589374911215.jpg",
+        "data/27/crops/list_1589374921221.jpg",
+        "data/27/crops/link_1589374945851.jpg",
+        "data/27/crops/image_1589374960124.jpg",
+        "data/27/crops/text_1589374970656.jpg",
+        "data/27/crops/video_1589374995010.jpg",
+        "data/27/crops/storyboard_1589375022006.jpg",
+        "data/27/crops/storyboard_1589375044875.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 27
+    },
+    {
+      "original_src": "data/28/original_1589375208656.jpg",
+      "notes": "Interesting sitemap",
+      "found": "",
+      "crops_src": [
+        "data/28/crops/table_1589375322336.jpg",
+        "data/28/crops/storyboard_1589375357360.jpg",
+        "data/28/crops/video_1589375381019.jpg",
+        "data/28/crops/sitemap_1589375414444.jpg",
+        "data/28/crops/grid_1589375423239.jpg",
+        "data/28/crops/input_1589375445478.jpg",
+        "data/28/crops/maps_1589375472209.jpg",
+        "data/28/crops/sitemap_1589375495379.jpg",
+        "data/28/crops/calendar_1589375518163.jpg",
+        "data/28/crops/storyboard_1589375532584.jpg",
+        "data/28/crops/form_1589375542760.jpg",
+        "data/28/crops/image_1589375605038.jpg",
+        "data/28/crops/text_1589375620401.jpg",
+        "data/28/crops/sitemap_1589375641635.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 28
     }
   ]
 }
