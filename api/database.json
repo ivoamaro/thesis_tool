@@ -753,6 +753,100 @@
       ],
       "apiId": "database.json",
       "id": 36
+    },
+    {
+      "original_src": "data/37/original_1589449060145.jpg",
+      "notes": "Difficult to understand some of the sketches. REF: https://www.flickr.com/photos/grega85/4622785472/in/photostream/",
+      "found": "Online",
+      "crops_src": [
+        "data/37/crops/logo_1589449100995.jpg",
+        "data/37/crops/image_1589449120016.jpg",
+        "data/37/crops/columns_1589449187612.jpg",
+        "data/37/crops/crops_1589449214963.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 37
+    },
+    {
+      "original_src": "data/38/original_1589449348474.jpg",
+      "notes": "REF: https://careerfoundry.com/en/blog/ux-design/how-to-create-your-first-wireframe/",
+      "found": "Online",
+      "crops_src": [
+        "data/38/crops/screensize_1589449563254.jpg",
+        "data/38/crops/image_1589449585960.jpg",
+        "data/38/crops/video_1589449605004.jpg",
+        "data/38/crops/storyboard_1589449634177.jpg",
+        "data/38/crops/text_1589449645816.jpg",
+        "data/38/crops/footer_1589449665240.jpg",
+        "data/38/crops/navbar_1589449681454.jpg",
+        "data/38/crops/button_1589449695780.jpg",
+        "data/38/crops/logo_1589449707041.jpg",
+        "data/38/crops/image_1589449734298.jpg",
+        "data/38/crops/form_1589449758418.jpg",
+        "data/38/crops/input_1589449773257.jpg",
+        "data/38/crops/iconography_1589449792291.jpg",
+        "data/38/crops/container_columns_1589449814140.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 38
+    },
+    {
+      "original_src": "data/39/original_1589450181015.jpg",
+      "notes": "REF: http://joey-yin.com/portfolio_page/cmi/",
+      "found": "Online",
+      "crops_src": [
+        "data/39/crops/graphics_1589450204754.jpg",
+        "data/39/crops/sitemap_1589450233985.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 39
+    },
+    {
+      "original_src": "data/40/original_1589450404027.jpg",
+      "notes": "REF: http://uxdesignmastery.com/deliverables/",
+      "found": "Online",
+      "crops_src": [
+        "data/40/crops/image_1589450454372.jpg",
+        "data/40/crops/storyboard_1589450438901.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 40
+    },
+    {
+      "original_src": "data/41/original_1589450719998.jpg",
+      "notes": "REF: http://uxdesignmastery.com/deliverables/",
+      "found": "Online",
+      "crops_src": ["data/41/crops/storyboard_1589450761725.jpg"],
+      "apiId": "database.json",
+      "id": 41
+    },
+    {
+      "original_src": "data/42/original_1589450857811.jpg",
+      "notes": "REF: http://uxdesignmastery.com/deliverables/",
+      "found": "Online",
+      "crops_src": [
+        "data/42/crops/sitemap_1589450882107.jpg",
+        "data/42/crops/storyboard_1589450904422.jpg",
+        "data/42/crops/graphics_1589450935864.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 42
+    },
+    {
+      "original_src": "data/43/original_1589451019302.jpg",
+      "notes": "REF: http://uxdesignmastery.com/deliverables/",
+      "found": "Online",
+      "crops_src": [
+        "data/43/crops/sitemap_1589451038854.jpg",
+        "data/43/crops/image_1589451055774.jpg",
+        "data/43/crops/form_1589451068240.jpg",
+        "data/43/crops/iconography_1589451096634.jpg",
+        "data/43/crops/iconography_1589451110415.jpg",
+        "data/43/crops/storyboard_1589451126457.jpg",
+        "data/43/crops/video_1589451144447.jpg"
+      ],
+      "apiId": "database.json",
+      "id": 43
     }
   ]
 }
