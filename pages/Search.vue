@@ -10,7 +10,7 @@
     <div v-for="(crops,i) in filteredCrops" :key="crops + i">
       <div class="box src">
         <img :src="crops" alt="cenas" />
-        <p>{{crops}}</p>
+        <!---<p>{{crops}}</p>-->
       </div>
     </div>
   </div>
